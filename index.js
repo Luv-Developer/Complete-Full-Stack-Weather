@@ -72,12 +72,8 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// Export the app for Vercel
-module.exports = app;
 
 // Start the server only if not in a Vercel environment
-if (process.env.VERCEL !== "1") {
     app.listen(PORT, () => {
         console.log(`App is listening at ${PORT}`);
     });
-}
